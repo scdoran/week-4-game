@@ -1,0 +1,47 @@
+body {
+     margin: 0;
+     background: url("../images/mountains.jpg");
+     background-size: cover;
+     background-repeat:no-repeat;
+}
+
+h1 {
+    font-family: 'Roboto Condensed',sans-serif;
+    font-size: 75px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transform: uppercase;
+    text-shadow: 1px 1px 0 #2be70e, -1px -1px 0 #2be70e, 1px -1px 0 #2be70e, -1px 1px 0 #2be70e, 0px 1px 0 #2be70e, 1px 0px 0 #2be70e, 0px -1px 0 #2be70e, -1px 0px 0 #2be70e, 3px 3px 2px #000000;    text-shadow: 1px 1px 0 #2be70e, -1px -1px 0 #2be70e, 1px -1px 0 #2be70e, -1px 1px 0 #2be70e, 0px 1px 0 #2be70e, 1px 0px 0 #2be70e, 0px -1px 0 #2be70e, -1px 0px 0 #2be70e, 3px 3px 2px #000000;
+}
+
+h2 {
+    color: #4e2c20;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Contrail+One', sans-serif;
+}
+
+p, span {
+	color: #4e2c20;
+	font-weight: bold;
+    font-size: 18px;
+    font-family: 'Cambay', sans-serif;
+}
+
+.well {
+   background-color: rgba(245, 245, 245, 0.4);
+}
+
+.panel-transparent .panel-heading .panel-body {
+    background-color: rgba(245, 245, 245, 0.4)
+}
+
+img {
+	max-width: 200px;
+    max-height: 130px;
+
+}
+
+.img-responsive {
+    margin: 0 auto;
+}

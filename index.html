@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Twin Peaks Clue Collector</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	</head>
+	
+	<body>
+		<div class="text-center container-fluid">
+			<h1>Clue Collector: Twin Peaks Edition</h1>
+			<h2>One Step Closer to Understanding Laura Palmer's Murder</h2>
+		</div>
+			<div class="well row">
+				<div class="col-md-1"></div>
+				<div class="col-md-8">
+					<p>You will be given a random number at the start of the game.</p>
+					<p>There are four clues below. When you click the clues you will add a spcific amount of points to your total score.</p>
+					<p>If you match your total points to the random number displayed below, you will win the game. If you go over the number, you will lose.</p>
+					<p>The value of each clue is hidden from you until you click on it.</p>
+					<p>Each time a new game starts, the computer will change the values of each clue.</p>
+				</div>
+				<div class= "col-md-1"></div>
+				<div class="col-md-2">
+					<span id="report"></span>
+					<p>Wins: <span id="wins">0</span></p>
+					<p>Losses: <span id="losses">0</span></p>
+				</div>
+			</div>
+
+			<div class="well row">
+				<div class="col-md-2"></div>
+
+				<div class="col-md-2">
+					<img src="assets/images/lockett.JPG" alt="Laura Palmer's Locket" class="img-responsive" id="image1">
+				</div>
+
+				<div class="col-md-2">
+					<img src="assets/images/diary.jpg" alt="Laura Palmer's Diary" class="img-responsive" id="image2">
+				</div>
+
+				<div class="col-md-2">
+					<img src="assets/images/pokerchip.JPG" alt="A poker chip from One Eyed Jack's" class="img-responsive" id="image3">
+				</div>
+
+				<div class="col-md-2">
+					<img src="assets/images/cassette-tape.JPG" alt="Laura Palmer's Locket" class="img-responsive" id="image4">
+				</div>
+
+				<div class="col-md-2"></div>
+			</div>
+
+			<div class="well row">
+				<div class="col-md-2"></div>
+
+				<div class="col-md-3">
+					<p>Number to Match</p>
+					<p><span id="random-number"></span></p>
+				</div>
+
+				<div class="col-md-2"></div>
+
+				<div class="col-md-3">
+					<p >Your Total Score</p>
+					<p><span id="user-number"></span></p>
+				</div>
+
+				<div class="col-md-2"></div>
+
+			</div>
+	</body>
+</html>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
