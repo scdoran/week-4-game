@@ -15,17 +15,16 @@ var image = {
 }
 
 // Function to randomly pick a new target number each time the game ends.
-	function newNumber() {
-		game.targetNumber = Math.floor((Math.random() * 102) + 19);
-		$("#target-number").text(game.targetNumber);
-		console.log(game.targetNumber);
-	}
+	// function newNumber() {
+		
+	// }
 
 function newGame() {
+	console.log("Starting a new game.")
 
 // Sets a new random number for the target number.
-	game.targetNumber = newNumber();
-	
+	game.targetNumber = Math.floor((Math.random() * 102) + 19);
+	console.log(game.targetNumber);
 // // Sets new numbers for all of the clues at the start of a new game.
 	image.one = Math.floor(Math.random() * 12) + 1;
 	image.two = Math.floor(Math.random() * 12) + 1;
@@ -40,6 +39,9 @@ function newGame() {
 	$("losses").text(game.losses);
 }
 
+$(document).ready(function() {
+    newGame();
+
 $("#clueImage1").on("click", function() {
 	
 	game.count += image.one;
@@ -50,11 +52,12 @@ $("#clueImage1").on("click", function() {
 		$("#report").text("You win!");
 		game.wins++;
 		newGame();
-	} 
-	if (game.count > game.targetNumber) {
+	} else if (game.count > game.targetNumber) {
 		$("#report").text("You lose!");
 		game.losses++;
 		newGame();
+	} else {
+		return;
 	}
 });
 
@@ -68,11 +71,12 @@ $("#clueImage2").on("click", function() {
 		$("#report").text("You win!");
 		game.wins++;
 		newGame();
-	} 
-	if (game.count > game.targetNumber) {
+	} else if (game.count > game.targetNumber) {
 		$("#report").text("You lose!");
 		game.losses++;
 		newGame();
+	} else {
+		return;
 	}
 });
 
@@ -86,11 +90,12 @@ $("#clueImage3").on("click", function() {
 		$("#report").text("You win!");
 		game.wins++;
 		newGame();
-	} 
-	if (game.count > game.targetNumber) {
+	} else if (game.count > game.targetNumber) {
 		$("#report").text("You lose!");
 		game.losses++;
 		newGame();
+	} else {
+		return;
 	}
 });
 
@@ -104,14 +109,13 @@ $("#clueImage4").on("click", function() {
 		$("#report").text("You win!");
 		game.wins++;
 		newGame();
-	} 
-	if (game.count > game.targetNumber) {
+	} else if (game.count > game.targetNumber) {
 		$("#report").text("You lose!");
 		game.losses++;
 		newGame();
+	} else {
+		return;
 	}
 });
 
-$(document).ready(function() {
-    newGame();
 });
