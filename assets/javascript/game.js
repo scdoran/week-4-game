@@ -9,7 +9,6 @@ var game = {
 function newGame() {
 // Sets a new random number for the target number.
 	game.targetNumber = Math.floor((Math.random() * 102) + 19);
-	console.log(game.targetNumber);
 
 // Random number function called to make the clueImage ID value set to a random number.
 	randomNumber();
