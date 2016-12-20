@@ -5,7 +5,6 @@ var game = {
 	losses: 0,
 	targetNumber: 0
 }
-
 // Here are the variables that represent the separate clue images.
 var image = {
 	one: 0,
@@ -33,80 +32,34 @@ function newGame() {
 	setTimeout(function(){$("#report").empty()}, 1000);
 }
 
-function winReport(){
-	game.wins++;
-	$("#report").text("You win!");
-}
-
-function loseReport(){
-	game.losses++;
-	$("#report").text("You lose!");
-}
-
-$("#clueImage1").on("click", function() {
-	
-	game.count += image.one;
-	$("#user-number").text(game.count);
-
-	if (game.count === game.targetNumber) {
-		winReport();
-		newGame();
-	} else if (game.count > game.targetNumber) {
-		loseReport();
-		newGame();
-	} else {
-		return;
-	}
-});
-
-$("#clueImage2").on("click", function() {
-
-	game.count += image.two;
-	$("#user-number").text(game.count);
-
-	if (game.count === game.targetNumber) {
-		winReport();
-		newGame();
-	} else if (game.count > game.targetNumber) {
-		loseReport();
-		newGame();
-	} else {
-		return;
-	}
-});
-
-$("#clueImage3").on("click", function() {
-
-	game.count += image.three;
-	$("#user-number").text(game.count);
-
-	if (game.count === game.targetNumber) {
-		winReport();
-		newGame();
-	} else if (game.count > game.targetNumber) {
-		loseReport();
-		newGame();
-	} else {
-		return;
-	}
-});
-
-$("#clueImage4").on("click", function() {
-
-	game.count += image.four;
-	$("#user-number").text(game.count);
-
-	if (game.count === game.targetNumber) {
-		winReport();
-		newGame();
-	} else if (game.count > game.targetNumber) {
-		loseReport();
-		newGame();
-	} else {
-		return;
-	}
-});
-
 $(document).ready(function() {
     newGame();
+
+	$("#clueImage1").attr("data-clueValue", Math.floor(Math.random() * 12) + 1);
+	$("#clueImage2").attr("data-clueValue", Math.floor(Math.random() * 12) + 1);
+	$("#clueImage3").attr("data-clueValue", Math.floor(Math.random() * 12) + 1);
+	$("#clueImage4").attr("data-clueValue", Math.floor(Math.random() * 12) + 1);
+
+	$(".clueImage").click(function(event){
+
+		$("#user-number").text(game.count);
+
+		game.count += parseInt($(event.target).attr("data-clueValue"));
+		console.log(event.target);
+
+		if (game.count === game.targetNumber) {
+			game.wins++;
+			$("#report").text("You win!");
+			newGame();
+
+		} else if (game.count > game.targetNumber) {
+			game.losses++;
+			$("#report").text("You lose!");
+			newGame();
+
+		} else {
+			return;
+		}
+	});
+
 });
