@@ -32,16 +32,13 @@ p, span {
    background-color: rgba(245, 245, 245, 0.4);
 }
 
-.panel-transparent .panel-heading .panel-body {
-    background-color: rgba(245, 245, 245, 0.4)
-}
-
 img {
 	max-width: 200px;
     max-height: 130px;
-
 }
 
 .img-responsive {
     margin: 0 auto;
+    margin-bottom: 10px;
+
 }
